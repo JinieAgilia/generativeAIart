@@ -1,0 +1,7 @@
+gunicorn
+flask
+diffusers
+transformers
+torch
+accelerate
+safetensors
