@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 model_id = "runwayml/stable-diffusion-v1-5"
-pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+pipe = StableDiffusionPipeline.from_pretrained(model_id) # remove the torch_dtype argument.
 
 device = "cuda" if torch.cuda.is_available() else "cpu" #macbook air intel 2017 likely use cpu
 pipe = pipe.to(device)
